@@ -403,6 +403,7 @@ message LayerParameter {
   optional ThresholdParameter threshold_param = 128;
   optional TileParameter tile_param = 138;
   optional WindowDataParameter window_data_param = 129;
+  optional PicPacParameter picpac_param = 501;
 }
 
 // Message that stores parameters used to apply transformation
@@ -1397,3 +1398,53 @@ message PReLUParameter {
   // Whether or not slope paramters are shared across channels.
   optional bool channel_shared = 2 [default = false];
 }
+
+message PicPacParameter {
+  required string path = 1; 
+  optional int32 seed = 2; 
+  optional bool loop = 3; 
+  optional bool shuffle = 4; 
+  optional bool reshuffle = 5; 
+  optional int32 stratify = 6; 
+  optional uint32 split = 7; 
+  optional int32 split_fold = 8; 
+  optional bool split_negate = 9; 
+  optional string mixin = 10;
+  optional float mixin_group_delta = 11;
+  optional uint32 mixin_max = 12;
+  optional bool cache = 13;
+  optional uint32 preload = 14;
+  optional uint32 threads = 15;
+  optional int32 channels = 16;
+  optional int32 min_size = 17;
+  optional int32 max_size = 18;
+  optional int32 resize_width = 19;
+  optional int32 resize_height = 20;
+  optional int32 crop_width = 21;
+  optional int32 crop_height = 22;
+  optional int32 decode_mode = 23;
+  optional string annotate = 24;
+  optional int32 anno_type = 25;
+  optional bool anno_copy = 26;
+  optional float anno_color1 = 27;
+  optional float anno_color2 = 28;
+  optional float anno_color3 = 29;
+  optional int32 anno_thickness = 30;
+  optional bool perturb = 31;
+  optional float pert_color1 = 32;
+  optional float pert_color2 = 33;
+  optional float pert_color3 = 34;
+  optional float pert_angle = 35;
+  optional float pert_min_scale = 36;
+  optional float pert_max_scale = 37;
+  optional bool pert_hflip = 38;
+  optional bool pert_vflip = 39;
+  optional float mean_color1 = 40;
+  optional float mean_color2 = 41;
+  optional float mean_color3 = 42;
+  optional uint32 onehot = 43;
+  optional uint32 batch = 44;
+  optional bool pad = 45;
+  optional bool bgr2rgb = 46;
+}
+
