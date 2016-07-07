@@ -1400,15 +1400,15 @@ message PReLUParameter {
 }
 
 message PicPacParameter {
-  required string path = 1; 
-  optional int32 seed = 2; 
-  optional bool loop = 3; 
-  optional bool shuffle = 4; 
-  optional bool reshuffle = 5; 
-  optional int32 stratify = 6; 
-  optional uint32 split = 7; 
-  optional int32 split_fold = 8; 
-  optional bool split_negate = 9; 
+  required string path = 1;
+  optional int32 seed = 2;
+  optional bool loop = 3;
+  optional bool shuffle = 4;
+  optional bool reshuffle = 5;
+  optional int32 stratify = 6;
+  optional uint32 split = 7;
+  optional int32 split_fold = 8;
+  optional bool split_negate = 9;
   optional string mixin = 10;
   optional float mixin_group_delta = 11;
   optional uint32 mixin_max = 12;
@@ -1430,21 +1430,22 @@ message PicPacParameter {
   optional float anno_color2 = 28;
   optional float anno_color3 = 29;
   optional int32 anno_thickness = 30;
-  optional bool perturb = 31;
-  optional float pert_color1 = 32;
-  optional float pert_color2 = 33;
-  optional float pert_color3 = 34;
-  optional float pert_angle = 35;
-  optional float pert_min_scale = 36;
-  optional float pert_max_scale = 37;
-  optional bool pert_hflip = 38;
-  optional bool pert_vflip = 39;
-  optional float mean_color1 = 40;
-  optional float mean_color2 = 41;
-  optional float mean_color3 = 42;
-  optional uint32 onehot = 43;
-  optional uint32 batch = 44;
-  optional bool pad = 45;
-  optional bool bgr2rgb = 46;
+  optional float anno_min_ratio = 31;
+  optional bool perturb = 32;
+  optional float pert_color1 = 33;
+  optional float pert_color2 = 34;
+  optional float pert_color3 = 35;
+  optional float pert_angle = 36;
+  optional float pert_min_scale = 37;
+  optional float pert_max_scale = 38;
+  optional bool pert_hflip = 39;
+  optional bool pert_vflip = 40;
+  optional float mean_color1 = 41;
+  optional float mean_color2 = 42;
+  optional float mean_color3 = 43;
+  optional uint32 onehot = 44;
+  optional uint32 batch = 45;
+  optional bool pad = 46;
+  optional bool bgr2rgb = 47;
 }
 
