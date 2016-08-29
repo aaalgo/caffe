@@ -1447,5 +1447,6 @@ message PicPacParameter {
   optional uint32 batch = 45;
   optional bool pad = 46;
   optional bool bgr2rgb = 47;
+  optional bool channel_first = 48;
 }
 

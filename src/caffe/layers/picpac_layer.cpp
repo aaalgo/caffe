@@ -25,6 +25,7 @@ PicPacLayer<Dtype>::PicPacLayer(const LayerParameter& param)
         config_.v = param.picpac_param().v(); }
     PICPAC_CONFIG_UPDATE_ALL(0);
 #undef PICPAC_CONFIG_UPDATE
+    config_.channel_first = true;
     path_ = param.picpac_param().path();
     //stream_ = new picpac::BatchImageStream(param.picpac_param().path(), config);
 }
